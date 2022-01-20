@@ -1,0 +1,43 @@
+{
+    "name": "sammyjo20/saloon",
+    "description": "Interact with REST APIs with confidence and elegance.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Sammyjo20\\Saloon\\": "src/",
+            "Sammyjo20\\Saloon\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sammyjo20",
+            "email": "29132017+Sammyjo20@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "^7.3",
+        "illuminate/collections": "^8.0",
+        "laravel/helpers": "^1.4"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.5",
+        "pestphp/pest": "^1.21",
+        "spatie/ray": "^1.33"
+    },
+    "scripts": {
+        "test": [
+            "./vendor/bin/pest"
+        ],
+        "fix-code": [
+            "./vendor/bin/php-cs-fixer fix"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}

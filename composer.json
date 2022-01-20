@@ -1,0 +1,61 @@
+{
+    "authors": [
+        {
+            "name": "Sammyjo20",
+            "email": "29132017+Sammyjo20@users.noreply.github.com"
+        },
+        {
+            "name": "Sam Carré",
+            "email": "29132017+Sammyjo20@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.3",
+        "illuminate/collections": "^8.0",
+        "illuminate/console": "^8.0",
+        "illuminate/support": "^8.0",
+        "laravel/helpers": "^1.4",
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.5",
+        "orchestra/testbench": "^v6.24.0",
+        "pestphp/pest": "^1.21",
+        "phpunit/phpunit": "^9.5",
+        "spatie/ray": "^1.33",
+        "symplify/monorepo-builder": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sammyjo20\\SaloonLaravel\\": "packages/saloon-laravel/src/",
+            "Sammyjo20\\Saloon\\": "packages/saloon/src/",
+            "Sammyjo20\\Saloon\\Tests\\": "tests/saloon/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sammyjo20\\Saloon\\Tests\\": "packages/saloon/tests/",
+            "Sammyjo20\\SaloonLaravel\\Tests\\": "packages/saloon-laravel/tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sammyjo20\\SaloonLaravel\\SaloonServiceProvider"
+            ],
+            "aliases": {
+                "Saloon": "Sammyjo20\\SaloonLaravel\\Facade"
+            }
+        }
+    },
+    "replace": {
+        "sammyjo20/saloon": "self.version",
+        "sammyjo20/saloon-laravel": "self.version"
+    },
+    "minimum-stability": "stable",
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
